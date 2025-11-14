@@ -1,0 +1,124 @@
+
+@import '../../../../styles/variables';
+
+.list-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+
+  .list-menu {
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      list-style: none;
+      padding: 0;
+      color: $text-color;
+
+      li {
+        padding: 10px 25px;
+        background-color: #f5f5f5;
+        border-radius: 25px;
+        cursor: pointer;
+        font-weight: 500;
+        transition: all 0.3s;
+        user-select: none;
+        font-weight: bold;
+
+
+        &:hover {
+          background-color: $second-color;
+          color: #fff;
+        }
+
+        &.active {
+          background-color: #ff6600;
+          color: #fff;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .product-slide {
+    .slide-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 15px;
+      margin-left: 20px;
+      border-radius: 15px;
+      text-align: center;
+      transition: transform 0.3s;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+      img {
+        max-width: 220px;
+        width: 100%;
+        height: auto;
+        border-radius: 15px;
+        margin-bottom: 12px;
+        margin-left: 30px;
+      }
+
+      h4 {
+        font-size: 1.1rem;
+        margin-bottom: 6px;
+        color: $text-color;
+      }
+
+      .price{
+        color: red;
+      }
+
+      p {
+        margin: 3px 0;
+        color: #555;
+        font-size: 0.9rem;
+
+        &:first-of-type {
+          font-weight: bold;
+          color: #000;
+        }
+      }
+    }
+  }
+
+
+  @media (max-width: 1024px) {
+    .product-slide .slide-item img {
+      max-width: 180px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .list-menu ul {
+      gap: 8px;
+    }
+
+    .product-slide .slide-item {
+      padding: 10px;
+
+      img {
+        max-width: 150px;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .product-slide .slide-item img {
+      max-width: 120px;
+    }
+
+    .list-menu ul {
+      justify-content: center;
+    }
+  }
+}
